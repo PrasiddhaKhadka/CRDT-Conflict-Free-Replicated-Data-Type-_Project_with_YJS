@@ -20,6 +20,12 @@ const ySocketIO = new YSocketIO(io)
 ySocketIO.initialize()
 
 
+app.get("/",(req,res)=>{
+    res.status(200).json({
+        msg:'Success!',
+        success:true
+    })
+})
 
 app.get("/health",(req,res)=>{
     res.status(200).json({
